@@ -914,6 +914,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 22px;
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -1257,6 +1259,63 @@
 @media (max-width: 768px) {
   .app-shell {
     padding: 24px;
+  }
+
+  .summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .detail-shell {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px 0 32px;
+  }
+
+  .detail-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 16px;
+  }
+
+  .summary-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .detail-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 16px;
+  }
+
+  .detail-action-bar__actions {
+    width: 100%;
+  }
+
+  .detail-action-bar__actions button {
+    min-width: 0;
+  }
+
+  .field-with-copy dd {
+    min-width: 0;
+  }
+
+  .field-with-copy dd span,
+  .detail-student__identity,
+  .summary-card__meta dd,
+  .summary-card__students p {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .detail-student__head,
+  .detail-student__meta {
+    flex-wrap: wrap;
+  }
+
+  .detail-record-list li {
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-width: 0;
   }
 
   .app-header,
