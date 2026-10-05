@@ -645,6 +645,10 @@
   box-shadow: 0 0 0 4px rgba(53, 106, 230, 0.08);
 }
 
+.device-field select {
+  cursor: pointer;
+}
+
 .record-section {
   margin-top: 26px;
   border-top: 1px solid var(--border);

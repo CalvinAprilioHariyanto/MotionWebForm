@@ -278,14 +278,17 @@ function StudentWorkspace({
             </div>
             <div className="device-field">
               <label htmlFor={`device-${activeStudent.id}`}>Device name</label>
-              <input
+              <select
                 id={`device-${activeStudent.id}`}
-                type="text"
-                placeholder="e.g. GoPro, ZY Black, ZY White"
                 value={studentDevice}
                 onChange={(e) => onUpdateStudentDevice(activeStudent.id, e.target.value)}
                 disabled={!activeStudent.isPresent}
-              />
+              >
+                <option value="">Select device</option>
+                <option value="GoPro">GoPro</option>
+                <option value="ZY Black">ZY Black</option>
+                <option value="ZY White">ZY White</option>
+              </select>
             </div>
           </div>
         </div>
